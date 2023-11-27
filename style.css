@@ -1,0 +1,171 @@
+html {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+#addTask {
+    display: none;
+}
+
+#task {
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+}
+
+#task:focus {
+    outline: none;
+}
+
+label {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    line-height: 60px;
+}
+
+label::before {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    left: 0px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 100%;
+}
+
+input {
+    font-size: 20px;
+    padding: 0  25px;
+    border: none;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+input[type="checkbox"]::after {
+    content: " ";
+    position: absolute;
+    width: 7px;
+    height: 12px;
+    top: 20px;
+    left: 10px;
+    border:  solid green;
+    border-width: 0px 4px 4px 0px;
+    transform: rotate(35deg) ;
+    display: none;
+} 
+
+input[type="checkbox"]:checked::after{
+    display: inline-block;
+}
+
+ul  {
+    margin: 0;
+    list-style: outside;
+    padding-inline-start: 0px;
+}
+
+ul li {
+    list-style: outside
+}
+
+span {
+    font-size: 14px;
+    margin-right: 30px;
+}
+
+.container_btn{
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.container_btn button {
+    margin: 5px;
+    padding: 0;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.container_btn button:hover {
+    cursor: pointer;
+    border: 1px solid #f5d3d3;
+}
+
+#items {
+    margin-right: 5px;
+}
+
+#clearCompleted {
+    margin-left: 30px;
+    position: relative;
+
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.destroy{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    font-size: 30px;
+    color: #cc9a9a;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 11px;
+    transition: color 0.2s ease-out;
+}
+
+.destroy:hover {
+    color: #af5b5e;
+}
+
+.destroy:after {
+    content: '×';
+}
+
+label:hover .destroy {
+    display: block;
+}
